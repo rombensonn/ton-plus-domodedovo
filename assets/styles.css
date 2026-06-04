@@ -14,7 +14,6 @@
     --accent: #ff6b16;
     --accent-2: #ffb15c;
     --accent-dark: #c84b00;
-    --success: #2dd493;
     --danger: #ff6b54;
     --shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
     --radius: 8px;
@@ -573,21 +572,19 @@ img {
     transition: transform 520ms var(--ease), filter 520ms var(--ease);
 }
 
-.service-card__top,
-.service-card > p,
-.service-card > small,
-.service-card > .text-button {
+.service-card__body {
     position: relative;
     z-index: 1;
-    margin-left: 20px;
-    margin-right: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 18px 20px 20px;
 }
 
 .service-card__top {
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 14px;
-    margin-top: 18px;
     margin-bottom: 12px;
 }
 
@@ -626,19 +623,10 @@ img {
     font-weight: 800;
 }
 
-.service-card small,
-.review-card small {
-    display: block;
-    margin-top: 12px;
-    color: var(--success);
-    font-weight: 900;
-}
-
 .text-button {
     align-self: flex-start;
     min-height: 44px;
     margin-top: auto;
-    margin-bottom: 20px;
     border: 1px solid rgba(255, 107, 22, 0.28);
     border-radius: var(--radius);
     padding: 0 14px;
@@ -698,8 +686,8 @@ img {
 }
 
 .status-pill--open {
-    color: #042f22;
-    background: #c8f8e2;
+    color: #5d3300;
+    background: #ffe3ad;
 }
 
 .status-pill--soon {
@@ -795,8 +783,8 @@ img {
 }
 
 .form-message--success {
-    color: #064e3b;
-    background: #dcfce7;
+    color: #4b2602;
+    background: #fff1d6;
 }
 
 .form-message--error {
@@ -961,11 +949,6 @@ img {
 
 .review-card p {
     color: #334155;
-}
-
-.review-card small {
-    margin-top: 14px;
-    color: #08724f;
 }
 
 .caution-section {

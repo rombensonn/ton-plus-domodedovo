@@ -457,14 +457,15 @@ $schema = [
                             <figure class="service-card__media">
                                 <img src="<?= e($service['image']) ?>" alt="<?= e($service['imageAlt']) ?>" loading="lazy" width="640" height="480">
                             </figure>
-                            <div class="service-card__top">
-                                <h3><?= e($service['title']) ?></h3>
-                                <strong>от <?= e(price_rub($service['price'])) ?></strong>
+                            <div class="service-card__body">
+                                <div class="service-card__top">
+                                    <h3><?= e($service['title']) ?></h3>
+                                    <strong>от <?= e(price_rub($service['price'])) ?></strong>
+                                </div>
+                                <p><?= e($service['summary']) ?></p>
+                                <p class="service-card__value"><?= e($service['clientValue']) ?></p>
+                                <button class="text-button" type="button" data-choose-service="<?= e($service['id']) ?>">Выбрать</button>
                             </div>
-                            <p><?= e($service['summary']) ?></p>
-                            <p class="service-card__value"><?= e($service['clientValue']) ?></p>
-                            <small><?= e($service['proof']) ?></small>
-                            <button class="text-button" type="button" data-choose-service="<?= e($service['id']) ?>">Выбрать</button>
                         </article>
                     <?php endforeach; ?>
                 </div>
@@ -613,7 +614,6 @@ $schema = [
                             <span><?= e($review['date']) ?></span>
                         </div>
                         <p><?= e($review['text']) ?></p>
-                        <small><?= e($review['tag']) ?></small>
                     </article>
                 <?php endforeach; ?>
             </div>
